@@ -30,7 +30,6 @@ while True:
                 print('Загаданное число больше введенного')
                 log_message(LogLevel.INFO,'Загаданное число больше введенного')
 
-
                 if m==k:
                     print('Попытки закончились')
                     log_message(LogLevel.INFO,'Попытки закончились')
