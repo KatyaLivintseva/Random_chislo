@@ -1,6 +1,5 @@
 import logging
-from enum import Enum # для упрощения вида
-
+from enum import Enum 
 class LogLevel(Enum):
 
     CRITICAL = 50
@@ -10,18 +9,18 @@ class LogLevel(Enum):
     DEBUG = 10
     NOTSET = 0
 
-LOGGER_FILE_NAME = "randomm.log" # название файла, куда должен записываться лог
+LOGGER_FILE_NAME = "randomm.log" #путь логгера
 LOGGER_LEVEL = LogLevel.INFO # = 50
 LOGGER_FORMATTER = logging.Formatter(
     '%(asctime)s - %(name)s - %(levelname)s - %(message)s') # форма записи в файл
 
-logger = logging.getLogger("Рандом") # получаем сам логгер
-logger.setLevel(LOGGER_LEVEL.value) # устанавливаем уровень записи
+logger = logging.getLogger("Рандом")
+logger.setLevel(LOGGER_LEVEL.value) 
 
-file_handler = logging.FileHandler(LOGGER_FILE_NAME, 'a', 'utf-8') # создаём обработчик файла
-file_handler.setLevel(LOGGER_LEVEL.value) # устанавливаем уровень записи
-file_handler.setFormatter(LOGGER_FORMATTER) # устанавливаем форму записи в файле
-logger.addHandler(file_handler) # добавляем обработчик в логгер
+file_handler = logging.FileHandler(LOGGER_FILE_NAME, 'a', 'utf-8') 
+file_handler.setLevel(LOGGER_LEVEL.value) 
+file_handler.setFormatter(LOGGER_FORMATTER) #форма записи 
+logger.addHandler(file_handler)
 
 def log_message(log_level: LogLevel, message: str):
     logger.log(log_level.value, message)
