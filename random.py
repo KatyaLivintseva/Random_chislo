@@ -16,17 +16,17 @@ while True:
             log_message(LogLevel.INFO,f'Пользователь ввел число {chislo}')
             print('попытка', m, 'из', k)
 
-            if chislo>randomm:
+            if chislo>randomik:
                 print('Загаданное число меньше введенного')
                 log_message(LogLevel.INFO,'Загаданное число меньше введенного')
 
                 if m==k:
                     print('Попытки закончились')
                     log_message(LogLevel.INFO,'Попытки закончились')
-                    print('Загаданное число компьютера: ',randomm) #показываем, какую цифру загадала программа
-                    log_message(LogLevel.INFO,f'Загаданное число компьютера: {randomm}')
+                    print('Загаданное число компьютера: ',randomik) #показываем, какую цифру загадала программа
+                    log_message(LogLevel.INFO,f'Загаданное число компьютера: {randomik}')
 
-            if chislo<randomm:
+            if chislo<randomik:
                 print('Загаданное число больше введенного')
                 log_message(LogLevel.INFO,'Загаданное число больше введенного')
 
@@ -34,10 +34,10 @@ while True:
                 if m==k:
                     print('Попытки закончились')
                     log_message(LogLevel.INFO,'Попытки закончились')
-                    print('Загаданное число компьютера: ',randomm)
-                    log_message(LogLevel.INFO,f'Загаданное число компьютера: {randomm}')
+                    print('Загаданное число компьютера: ',randomik)
+                    log_message(LogLevel.INFO,f'Загаданное число компьютера: {randomik}')
 
-            if chislo==randomm:
+            if chislo==randomik:
                 print('Вы угадали число!')
                 log_message(LogLevel.INFO,'Пользователь угадал число')
                 break
