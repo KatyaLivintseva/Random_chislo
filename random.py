@@ -9,7 +9,7 @@ while True:
         log_message(LogLevel.INFO,f'Пользователь ввел максимальное число {N}')
         k=int(input('Количество попыток (Введите и нажмите ENTER) '))
         log_message(LogLevel.INFO,f'Пользователь ввел количество попыток {k}')
-        randomm=random.randint(1,N)
+        randomik=random.randint(1,N)
         m=1
         while m<=k: #отсчет количества попыток    
             chislo=int(input('Ваше число (Введите и нажмите ENTER) ')) #загадываем число
