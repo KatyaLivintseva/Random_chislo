@@ -2,8 +2,7 @@ import random
 from logger import LogLevel, log_message  
 while True:
     print('')
-    try:
-        
+    try:   
         log_message(LogLevel.INFO,"Включение программы")
         N=int(input('До какого числа можно загадать цифру? (Введите и нажмите ENTER) ')) 
         log_message(LogLevel.INFO,f'Пользователь ввел максимальное число {N}')
